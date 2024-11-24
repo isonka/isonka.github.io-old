@@ -110,6 +110,7 @@
   @media (max-width: 768px) {
     .rates-section .header h1 {
       font-size: 36px;
+      padding: 0;
     }
 
     .rates-section .rates-header {
