@@ -80,8 +80,7 @@
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     #section-three {
-        height: 700px; /* Adjust height to fit content */
-        padding: 20px; /* Add padding on smaller screens */
+        height: 700px; /* Adjust height to fit content */    
     }
 
     #section-three .bubble {
