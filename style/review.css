@@ -80,8 +80,8 @@
         flex-direction: column; /* Stack photo and content vertically */
         padding: 60px; /* Adjust padding */
         text-align: center;
-        width: 90%;/* Center align text */
-        max-width: 400px;
+        width: 80%;/* Center align text */
+        max-width: 300px;
     }
 
     .reviewer-photo {
