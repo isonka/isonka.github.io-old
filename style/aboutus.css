@@ -6,6 +6,7 @@
     height: 700px; /* Fixed height for the section */        
     padding: 20px; /* Add padding for spacing on smaller screens */
     position: relative;
+    overflow: hidden;
 }
 
 /* Content Wrapper */
@@ -81,9 +82,19 @@
 @media (max-width: 768px) {
     #section-three {
         height: 700px; /* Adjust height to fit content */    
+        padding: 0; /* Remove padding for full width */
     }
 
     #section-three .bubble {
-        width: 100%; /* Take full width on smaller screens */
+        width: 80%; /* Take full width on smaller screens */
     }
+
+    /* Small Bubble */
+#section-three .small-bubble {
+    font-size: 1rem; /* Regular font size */
+    background-color: black;
+    border-color: white;
+    color: white;
+    text-align: left;    
+}
 }
