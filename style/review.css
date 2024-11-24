@@ -1,0 +1,94 @@
+/* Reviews Section Styles */
+#reviews {
+    background-color: #ffd51c; /* Light background for contrast */
+    padding-top: 20px; /* Add space at the top */
+    padding-bottom: 20px; /* Add space at the bottom */
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(2, 1fr); /* Two columns of reviews */
+    gap: 25px; /* Space between rows and columns */
+    justify-items: center; /* Center align each bubble */
+}
+
+/* Individual Review Bubble */
+.review {
+    display: flex; /* Align photo and content horizontally */
+    position: relative; /* For absolute positioning of the photo */
+    background: white; /* White background for review bubbles */
+    border-radius: 25px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */    
+    padding: 20px 20px 20px 60px; /* Add padding on the left for photo overlap */
+    width: 100%; /* Full width within grid cell */
+    max-width: 350px; /* Maximum width for bubble */
+    align-items: center; /* Vertically align content */
+    gap: 20px; /* Space between image and content */
+    margin: 10px 0; /* Ensure bubbles have 20px total vertical margin */
+}
+
+/* Reviewer Photo */
+.reviewer-photo {
+    position: absolute; /* Position outside the bubble */
+    left: -30px; /* Offset to start outside the bubble */
+    top: 20%; /* Align midpoint vertically */
+    transform: translateY(-20%); /* Correct vertical alignment */
+    width: 60px; /* Photo size */
+    height: 60px;
+    border-radius: 50%; /* Circular photo */
+    object-fit: cover; /* Ensure the photo fits properly */
+    border: 5px solid white; /* Optional: Add a white border for clarity */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for photo */    
+}
+
+/* Review Content */
+.review-content {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Vertically align content */
+    text-align: left; /* Left-align text */
+    flex-grow: 1; /* Allow content to expand */
+}
+
+/* Reviewer Name */
+.reviewer-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0 0 5px;
+    color: #333;
+}
+
+/* Stars */
+.stars {
+    color: #ffd700; /* Gold color for stars */
+    font-size: 1.2rem; /* Size of stars */
+    margin-bottom: 10px;
+}
+
+/* Review Text */
+.review-text {
+    font-size: 1rem;
+    color: black;
+    line-height: 1.4; /* Improve readability */
+    margin: 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #reviews {
+        grid-template-columns: 1fr; /* One column on smaller screens */
+    }
+
+    .review {
+        flex-direction: column; /* Stack photo and content vertically */
+        padding: 60px; /* Adjust padding */
+        text-align: center; /* Center align text */
+    }
+
+    .reviewer-photo {
+        position: static; /* Remove absolute positioning on small screens */
+        margin-bottom: 15px; /* Add spacing below photo */
+        transform: none; /* Reset transformation */
+    }
+
+    .review-content {
+        align-items: center; /* Center-align content */
+    }
+}

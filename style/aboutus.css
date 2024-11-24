@@ -1,0 +1,90 @@
+/* Section Three Styles */
+#section-three {
+    background-image: url('../assets/images/about-us.jpg'); /* Replace with your image path */
+    background-size: cover; /* Cover entire section */
+    background-position: center; /* Center the background image */
+    height: 700px; /* Fixed height for the section */        
+    padding: 20px; /* Add padding for spacing on smaller screens */
+    position: relative;
+}
+
+/* Content Wrapper */
+#section-three .content {
+    position: absolute; 
+    top: 55px;
+    left: 20px;
+    display: flex; /* Flexbox for vertical alignment */
+    flex-direction: column; /* Stack bubbles vertically */
+    flex-wrap: wrap;
+    align-items: center; /* Center-align bubbles horizontally */
+    gap: 30px; /* Space between bubbles */    
+}
+
+/* Bubble Styles */
+#section-three .bubble {
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */    
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 10px; /* Add padding inside the bubble */    
+    color: #333; /* Text color */
+    line-height: 1.6; /* Improve readability */        
+    text-align: left; /* Left-align text */    
+    display: flex; /* Use flexbox for bubble content */
+    flex-direction: column; /* Stack elements vertically */    
+}
+/* Wide Bubble */
+#section-three .wide-bubble {
+    font-size: 1.1rem; /* Slightly larger font for emphasis */
+    background-color: #ffd51c;    
+    max-width: 350px;    
+    text-align: left; /* Align text to the left */    
+}
+
+#section-three .wide-bubble .title {
+    font-size: 50px; /* Slightly larger font for emphasis */
+    padding-top: 20px;
+    line-height: 1;
+    padding-right: 40px;
+    margin: 0;
+}
+
+#section-three .wide-bubble p { 
+    padding-top: 20px;   
+    padding-right: 40px;
+    margin: 0;
+    font-size: 16px; /* Slightly larger font for emphasis */
+}
+
+/* Small Bubble */
+#section-three .small-bubble {
+    font-size: 1rem; /* Regular font size */
+    background-color: black;
+    border-color: white;
+    color: white;
+    text-align: left;    
+}
+
+#section-three .small-bubble .title {
+    font-size: 16px; /* Slightly larger font for emphasis */
+    font-weight: bold;
+    padding-right: 40px;
+    margin: 0;
+}
+
+#section-three .small-bubble p {
+    max-width: 180px;
+    padding-right: 40px;    
+    margin: 0;
+    font-size: 18px; /* Slightly larger font for emphasis */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #section-three {
+        height: 700px; /* Adjust height to fit content */
+        padding: 20px; /* Add padding on smaller screens */
+    }
+
+    #section-three .bubble {
+        width: 100%; /* Take full width on smaller screens */
+    }
+}

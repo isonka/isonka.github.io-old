@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PT Studio 7</title>
+    <link rel="stylesheet" href="./style/main.css">        
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>            
+            <li><a href="#section2">Book a class</a></li>
+            <li><a href="#section-three">About Us</a></li>            
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#section5">Workouts</a></li>
+            <li><a href="#section6">Prices</a></li>
+            <li><a href="#section7">Contact</a></li>            
+        </ul>
+    </nav>
+
+    <!-- Sections -->
+    <section id="section1">
+        <video autoplay muted id="myVideo">
+            <source src="./assets/video/landing.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <script>
+            var scrolled = false;
+            let vid = document.getElementById("myVideo");
+            vid.onended = function() {
+                if (!scrolled) {
+                    window.location.href = "#section2";
+                    scrolled = true;
+                }              
+                vid.play();
+            };
+            </script>
+        <div id="video-overlay"></div>
+        <p>We are not just a sport studio, we are a community.</p>
+    </section>
+    <!-- Second Section -->    
+<section id="section2">
+    <div class="left">
+        <img src="./assets/images/pt7logo.png" alt="Logo" class="logo">
+    </div>
+    <div class="right">
+        <h1>We welcome everyone in every age and fitness level</h1>
+        <p>We would love to support you and motivate you to reach your goals and get a better healthiness</p>
+        <a href="#section3" class="btn">REGISTER</a>
+    </div>
+    <div class="fixed-text">7</div>
+</section>
+<section id="section-three">
+    <div class="content">        
+        <div class="bubble wide-bubble">
+            <p class="title">Let me tell you what you will find</p>
+            <p>
+                I’ve been doing this job for the last 13 years. Every day we try to be better for you.  We have this ambitious and willingness to help you. Our biggest difference from other studios is real attention to you! You are important for us! 
+            </p>
+        </div>
+        <div class="bubble small-bubble">
+            <p class="title">ELIF ARZU OGAN</p>
+            <p>
+                owner&trainer of</br>PT Studio 7
+            </p>
+        </div>    
+    </div>
+</section>
+<section id="reviews">    
+    <div class="review">
+        <img src="./assets/images/cansu.png" alt="Reviewer 1" class="reviewer-photo">
+        <div class="review-content">
+            <h3 class="reviewer-name">Cansu Topçu</h3>
+            <p class="review-text">What sets Elif apart is her ability to tailor each session to individual needs. Whether you're a beginner or have been practicing Pilates for years, Elif adapts her teaching style to suit all levels. She provides clear explanations, offers modifications when necessary, and encourages everyone to challenge themselves.</p>
+            <div class="stars">★★★★★</div>
+        </div>
+    </div>
+    <div class="review">
+        <img src="./assets/images/su.png" alt="Reviewer 3" class="reviewer-photo">
+        <div class="review-content">
+            <h3 class="reviewer-name">Su Çağla Albayrak</h3>
+            <p class="review-text">I was looking for a proper pilates studio when I first moved to Amsterdam, where the instructor takes good care of 2 things: how I do the movements (to avoid any injuries) and that I experience a continuous development. I desperately changed a couple of group class studios where it was all about making you sweat without any personal attention. Finally with Elif and her very professional and experienced approach, I found what I have been looking for and I feel in good hands.</p>
+            <div class="stars">★★★★★</div>
+        </div>
+    </div>
+    <div class="review">
+        <img src="./assets/images/yesim.png" alt="Reviewer 2" class="reviewer-photo">
+        <div class="review-content">
+            <h3 class="reviewer-name">Yeşim Ölçer Abi</h3>
+            <p class="review-text">I feel very lucky to have sessions with Elif, who is a highly proficient instructor. After a few months I noticed significant improvement in my flexibility and strength. I love that she carefully observes your movements and provides correction whenever necessary to maximize efficiency, even in group classes!</p>
+            <div class="stars">★★★★★</div>
+        </div>
+    </div>   
+    <div class="review">
+        <img src="./assets/images/tugce.png" alt="Reviewer 4" class="reviewer-photo">
+        <div class="review-content">
+            <h3 class="reviewer-name">Tuğçe Eskili</h3>
+            <p class="review-text">I have been training with Elif for 4 months, she helped me with my neck and back pain a lot! She listens to your complains and adjusts the exercises accordingly. Feel much stronger now. Great personal trainer!</p>
+            <div class="stars">★★★★★</div>
+        </div>
+    </div>
+</section>
+<section class="workouts-section">
+    <h1 class="section-title">workouts</h1>
+    <div class="workout-grid">
+      <div class="workout-card">
+        <img src="./assets/images/pilates.jpg" alt="Pilates">
+        <div class="workout-info">
+          <h2>Pilates</h2>
+          <div style="border: 2px solid #000;"></div>
+          <p>Whole body control and being awareness of yourself</p>
+        </div>
+      </div>
+      <div class="workout-card">
+        <img src="./assets/images/trx.jpg" alt="TRX Training">
+        <div class="workout-info">
+          <h2>TRX Training</h2>
+          <div style="border: 2px solid #000;"></div>
+          <p>Whole body functional training with suspended straps</p>
+        </div>
+      </div>
+      <div class="workout-card">
+        <img src="./assets/images/ems.jpg" alt="EMS Training">
+        <div class="workout-info">
+          <h2>EMS Training</h2>
+          <div style="border: 2px solid #000;"></div>
+          <p>Very intensive 25min workout</p>
+        </div>
+      </div>
+      <div class="workout-card">
+        <img src="./assets/images/free.jpg" alt="Free weights">
+        <div class="workout-info">
+          <h2>Free weights</h2>
+          <div style="border: 2px solid #000;"></div>
+          <p>Get stronger</p>
+        </div>
+      </div>
+      <div class="workout-card">
+        <img src="./assets/images/cardio.jpg" alt="Cardio">
+        <div class="workout-info">
+          <h2>Cardio</h2>
+          <div style="border: 2px solid #000;"></div>
+          <p>Burn more calories with HIIT workouts</p>
+        </div>
+      </div>
+    </div>
+    <div class="number-overlay">7</div>
+  </section>
+    <section class="rates-section">
+        <div class="rates-header">
+            <div class="header">
+            <h1>Rates</h1>
+            <p>We only do one-on-one classes during pregnancy.<br>
+                Please inform us if you have any injuries or joint problems.</p>
+            <p>We care about you! Email any assistance you need to<br>
+                <a href="mailto:ptstudio7amsterdam@gmail.com">ptstudio7amsterdam@gmail.com</a></p>
+            </div>
+            <div class="pricing-card group-class">
+                <h2>Group class</h2>
+                <table id="price-header-table">
+                    <tr>
+                        <td>Drop in</td>
+                        <td>€ 37</td>
+                    </tr>
+                    <tr>
+                        <td>5 class</td>
+                        <td>€ 175</td>
+                    </tr>
+                    <tr>
+                        <td>10 class</td>
+                        <td>€ 300</td>
+                    </tr>             
+                    <tr>
+                        <td>20 class</td>
+                        <td>€ 560</td>
+                    </tr>              
+                </table>  
+                <button>Book Now →</button>
+            </div>
+        </div>
+        <div class="pricing-container">          
+          <div class="pricing-card">
+            <h2>One on one</h2>
+            <table>
+                <tr>
+                    <td>1 class</td>
+                    <td>€ 80</td>
+                </tr>
+                <tr>
+                    <td>5 class</td>
+                    <td>€ 375</td>
+                </tr>
+                <tr>
+                    <td>10 class</td>
+                    <td>€ 725</td>
+                </tr>
+                <tr>
+                    <td>20 class</td>
+                    <td>€ 1400</td>
+                </tr>
+            </table>                                
+            <button>Book Now →</button>
+          </div>
+      
+          <div class="pricing-card">
+            <h2>Couple class</h2>
+            <table>
+                <tr>
+                    <td>1 class</td>
+                    <td>€ 50</td>
+                </tr>
+                <tr>
+                    <td>5 class</td>
+                    <td>€ 225</td>
+                </tr>
+                <tr>
+                    <td>10 class</td>
+                    <td>€ 430</td>
+                </tr>
+                <tr>
+                    <td>20 class</td>
+                    <td>€ 800</td>
+                </tr>                         
+            </table>                
+            <button>Book Now →</button>
+          </div>
+          <div class="pricing-card">
+            <h2>Trio class</h2>
+            <table>
+                <tr>
+                    <td>1 class</td>
+                    <td>€ 45</td>
+                </tr>
+                <tr>
+                    <td>5 class</td>
+                    <td>€ 210</td>
+                </tr>
+                <tr>
+                    <td>10 class</td>
+                    <td>€ 400</td>
+                </tr>          
+                <tr>
+                    <td>20 class</td>
+                    <td>€ 760</td>
+                </tr>             
+            </table>              
+            <button>Book Now →</button>
+          </div>
+        </div>
+      </section>    
+    <section id="section8">
+        <div class="left">
+            <h1>We are here</h1>
+            <p>Van Baerlestraat 76C, 1071BB</br>Amsterdam</p>                        
+            <div class="social">
+                <a href="mailto:ptstudio7amsterdam@gmail.com" target="_blank">
+                    <img src="./assets/images/email.jpg" alt="email">
+                </a>
+                <a href="mailto:ptstudio7amsterdam@gmail.com" target="_blank" style="text-decoration:none">
+                    <p>ptstudio7amsterdam@gmail.com</p>    
+                </a>
+            </div>
+            <div class="social">
+                <a href="https://www.instagram.com/ptstudio7amsterdam" target="_blank">
+                    <img src="./assets/images/instagram.jpg" alt="instagram">
+                </a>
+                <a href="https://www.instagram.com/ptstudio7amsterdam" style="text-decoration:none" target="_blank">
+                    <p>ptstudio7amsterdam</p>                
+                </a>
+            </div>
+            <div class="social">
+                <a href="tel:0685162693" target="_blank">
+                    <img src="./assets/images/phone.jpg" alt="Phone">
+                </a>
+                <a href="tel:0685162693" target="_blank" style="text-decoration:none">
+                    <p>06 85 16 26 93</p>                
+                </a>
+            </div>
+            <img src="./assets/images/pt7logo.png" style="width: 150px; height: 150px;" alt="Logo" class="logo">
+        </div>
+        <div class="right">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2436.7239958408204!2d4.876257777138345!3d52.3572909720188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c6090de92c90df%3A0xe44c5d7c1eae1d19!2sPT%20Studio%207!5e0!3m2!1sen!2snl!4v1732445893649!5m2!1sen!2snl" height="450" width="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            
+        </div>        
+    </section>
+</body>
+</html>

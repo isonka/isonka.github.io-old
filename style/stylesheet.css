@@ -1,0 +1,197 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    scroll-behavior: smooth;
+    font-family: 'helvetica_worldregular';
+}
+
+/* Section Styles */
+section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    font-family: 'helvetica_worldregular';
+}
+
+@font-face {
+    font-family: 'helvetica_worldregular';
+    src: url('../assets/fonts/HelveticaWorld-Regular.woff') format('woff'),
+            url('../assets/fonts/HelveticaWorld-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* First Section with Video Background */
+#section1 {
+    height: 100vh; /* Full screen height */
+    position: relative;
+    overflow: hidden;
+    align-items: center;
+}
+#section1 video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Place video behind content */
+}
+
+#video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.35); /* Black overlay with 0.85 opacity */
+    z-index: 1;
+}
+
+#section1 p {
+    font-size: 100px;
+    width: 80%;
+    color: white;
+    text-align: center;
+    z-index: 2; /* Ensure text is above overlay */
+}
+#section1 .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.35); /* Black overlay with 0.85 opacity */
+    z-index: 1;
+}
+#section1 .text {        
+    color: white;
+    font-size: 100px; /* Text size */
+    text-align: center;
+    z-index: 2; /* Ensure text is above overlay */    
+}
+
+/* Navigation Styles */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    z-index: 1000;
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+nav ul li {
+    display: inline;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+nav ul li a:hover {
+    background: #0073e6;
+    border-radius: 5px;
+}
+
+/* Left Section (Logo) */
+#section2 .left {
+    flex: 1; /* Take half the width */
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#section2 .left .logo {
+    max-width: 80%; /* Logo size relative to the container */
+    height: auto;
+}
+
+/* Right Section (Text and Button) */
+#section2 .right {
+    flex: 1; /* Take half the width */
+    height: 700px; /* Set a fixed height */
+    background-color: #ffd51c;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+#section2 .right h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: black;
+}
+
+#section2 .right p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: black;    
+}
+
+#section2 .right .btn {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1rem;
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#section2 .right .btn:hover {
+    background-color: #ffd51c; /* Slightly darker yellow on hover */
+    border-color: black;
+}
+
+#section2 {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    height: 700px; /* Adjust height to fit content */
+    position: relative; /* Set as the relative container for positioning the "7" */
+    background-color: black;
+}
+
+/* Fixed Position Text */
+#section2 .fixed-text {
+    position: absolute; /* Position relative to Section 2 */    
+    right: 10px; /* Distance from the right of Section 2 */
+    margin-bottom: 0px;
+    height: fit-content;
+    visibility: hidden;
+    font-size: 531px; /* Text size */
+    color: white; /* Matches the right section background */    
+    z-index: 1; /* Ensure it appears above other section content */
+}
+
+#section4 {
+    background-color: #ffd51c;
+}
+
+#section4 .img {    
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
