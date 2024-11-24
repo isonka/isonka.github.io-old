@@ -79,30 +79,9 @@
     .review {
         flex-direction: column; /* Stack photo and content vertically */
         padding: 60px; /* Adjust padding */
-        text-align: center; /* Center align text */
-    }
-
-    .reviewer-photo {
-        position: static; /* Remove absolute positioning on small screens */
-        margin-bottom: 15px; /* Add spacing below photo */
-        transform: none; /* Reset transformation */
-    }
-
-    .review-content {
-        align-items: center; /* Center-align content */
-    }
-}
-
-@media (max-width: 480px) {
-    #reviews {
-        grid-template-columns: 1fr; /* One column on smaller screens */
-    }
-
-    .review {
-        flex-direction: column; /* Stack photo and content vertically */
-        padding: 60px; /* Adjust padding */
-        width: 300px;
-        text-align: center; /* Center align text */
+        text-align: center;
+        width: 90%;/* Center align text */
+        max-width: 400px;
     }
 
     .reviewer-photo {
