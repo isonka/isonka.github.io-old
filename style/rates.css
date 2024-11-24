@@ -108,9 +108,17 @@
   
   /* Responsive Design for Section 6 */
   @media (max-width: 768px) {
-    .rates-section .header h1 {
-      font-size: 36px;
+    .rates-section {
       padding: 0;
+      background-color: #ffd51c;
+      color: black;
+      display: flex;
+      flex-direction: column;
+      font-family: 'helvetica_worldregular';
+    }
+    
+    .rates-section .header h1 {
+      font-size: 36px;      
     }
 
     .rates-section .rates-header {
