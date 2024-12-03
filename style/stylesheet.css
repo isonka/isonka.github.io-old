@@ -214,7 +214,7 @@ nav ul li a:hover {
     }
 }
 
-@media only screen {
+@media only screen and (max-width: 768px) {
     nav ul {
         list-style: none;
         margin: 0;
@@ -231,3 +231,4 @@ nav ul li a:hover {
         padding: 2px 5px;
     }
 }
+
