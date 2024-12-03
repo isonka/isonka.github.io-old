@@ -204,4 +204,11 @@ nav ul li a:hover {
         display: flex;
         gap: 0px;
     }
+
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        padding: 2px 5px;
+    }
 }
