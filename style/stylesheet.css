@@ -213,3 +213,21 @@ nav ul li a:hover {
         padding: 2px 5px;
     }
 }
+
+@media only screen {
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 0px;
+    }
+
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: normal;
+        font-size: 14px;
+        padding: 2px 5px;
+    }
+}
