@@ -65,7 +65,7 @@
     #section8 .left {
         flex-direction: column; /* Stack photo and content vertically */        
         text-align: left; /* Center align text */      
-        height: 350px;  
+        height: 380px;          
     }    
     #section8 .right {
         width: 100%;
