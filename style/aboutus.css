@@ -2,7 +2,7 @@
 #section-three {
     background-image: url('../assets/images/about-us.jpg'); /* Replace with your image path */
     background-size: cover; /* Cover entire section */
-    background-position: center; /* Center the background image */
+    background-position: top; /* Center the background image */
     height: 700px; /* Fixed height for the section */            
     position: relative;
     padding: 0; /* Remove padding for full width */
