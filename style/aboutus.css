@@ -17,7 +17,7 @@
     flex-wrap: wrap;
     left: 20px;
     top: 55px;
-    align-items: center; /* Center-align bubbles horizontally */
+    align-items: baseline;
     gap: 30px; /* Space between bubbles */    
 }
 
