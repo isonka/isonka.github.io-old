@@ -15,13 +15,15 @@
     display: flex; /* Flexbox for vertical alignment */
     flex-direction: column; /* Stack bubbles vertically */
     flex-wrap: wrap;
+    left: 20px;
+    top: 55px;
     align-items: center; /* Center-align bubbles horizontally */
     gap: 30px; /* Space between bubbles */    
 }
 
 /* Bubble Styles */
 #section-three .bubble {
-    background: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */    
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */    
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     padding: 10px; /* Add padding inside the bubble */  
     left: 20px;
@@ -35,7 +37,7 @@
 /* Wide Bubble */
 #section-three .wide-bubble {
     font-size: 1.1rem; /* Slightly larger font for emphasis */
-    background-color: rgba(255, 213, 28, 0.7);    
+    background-color: rgba(255, 213, 28, 0.7);
     max-width: 350px;    
     text-align: left; /* Align text to the left */    
 }
@@ -55,6 +57,13 @@
     font-size: 16px; /* Slightly larger font for emphasis */
 }
 
+/* Small Bubble */
+#section-three .small-bubble {
+    font-size: 1rem; /* Regular font size */
+    background-color: black;
+    border-color: white;
+    color: white;
+    text-align: left;    
 }
 
 #section-three .small-bubble .title {
