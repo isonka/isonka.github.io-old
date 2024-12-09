@@ -38,7 +38,7 @@
 #section-three .wide-bubble {
     font-size: 1.1rem; /* Slightly larger font for emphasis */
     background-color: rgba(255, 213, 28, 0.7);
-    max-width: 350px;    
+    max-width: 350px;
     text-align: left; /* Align text to the left */    
 }
 
@@ -83,12 +83,16 @@
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     #section-three {
-        height: 700px; /* Adjust height to fit content */    
+        height: 800px; /* Adjust height to fit content */    
         padding: 0; /* Remove padding for full width */
     }
 
     #section-three .bubble {
-        width: 80%; /* Take full width on smaller screens */
+        width: 90%; /* Take full width on smaller screens */        
+    }
+
+    #section-three .wide-bubble {
+        max-width: 300px;
     }
 
     /* Small Bubble */
@@ -98,5 +102,6 @@
     border-color: white;
     color: white;
     text-align: left;    
+    max-width: 200px;
 }
 }
