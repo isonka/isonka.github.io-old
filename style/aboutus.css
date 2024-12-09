@@ -92,7 +92,7 @@
     }
 
     #section-three .wide-bubble {
-        max-width: 250px;
+        max-width: 300px;
     }
 
     #section-three .wide-bubble .title {
@@ -110,6 +110,6 @@
     border-color: white;
     color: white;
     text-align: left;    
-    max-width: 180px;
+    max-width: 220px;
 }
 }
