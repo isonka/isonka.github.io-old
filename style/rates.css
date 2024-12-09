@@ -120,6 +120,7 @@ td:nth-child(odd) {
   
   .rates-section .header h1 {
     font-size: 36px;      
+    text-align: center;
   }
 
   .rates-section .rates-header {
