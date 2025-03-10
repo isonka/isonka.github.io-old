@@ -37,49 +37,54 @@
 /* Pricing Cards */
 .pricing-container {
   display: grid;
-  grid-template-columns: repeat(3, 1.5fr);
-  gap: 20px;    
-  margin-top: 30px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;    
+  margin-top: 20px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .pricing-card {
   background-color: #fff;
-  border-radius: 15px;
+  border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  width: 250px;
+  padding: 15px;
+  width: 220px;
   text-align: left;
 }
 
 .group-class {
-  border: 4px solid #ffd51c;
-  width: 350px;
+  border: 2px solid #ffd51c;
+  width: 220px;
 }
 
 table {    
   border-collapse: collapse;
   width: 100%;
-  height: 120px;
+  height: auto;
+  margin-top: 5px;
 }
 
 td, th {    
-  text-align: left;        
+  text-align: left;   
+  padding: 4px 0;     
 }
 
 td:nth-child(even) {
   text-align: center;
-  width: 100px;
+  width: 80px;
 }
 
 td:nth-child(odd) {
   display: list-item;
   list-style-position: inside;
-  width: 150px;
+  width: 120px;
 }
 
 .pricing-card h2 {
-  font-size: 20px;
-  margin-bottom: 10px;
+  font-size: 18px;
+  margin-bottom: 8px;
 }
 
 .pricing-card ul {    
@@ -105,6 +110,39 @@ td:nth-child(odd) {
 
 .pricing-card button:hover {
   background-color: #e3b718;
+}
+
+.pricing-card a {
+    text-decoration: none;
+    color: #0a1836;
+    font-weight: 500;
+    transition: color 0.2s ease;
+    display: inline-block;
+    padding: 2px 0;
+}
+
+.pricing-card a:hover {
+    color: #ffd51c;
+}
+
+.pricing-card td a {
+    position: relative;
+}
+
+.pricing-card td a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffd51c;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.pricing-card td a:hover::after {
+    transform: scaleX(1);
 }
 
 /* Responsive Design for Section 6 */
