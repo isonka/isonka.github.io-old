@@ -5,8 +5,7 @@
 @import url("stylesheet.css");
 @import url("workouts.css");
 
-a {
-    text-decoration: none;
+a {    
     color: inherit;
     transition: all 0.3s ease;
 }
