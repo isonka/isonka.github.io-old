@@ -112,11 +112,9 @@ td:nth-child(odd) {
   background-color: #e3b718;
 }
 
-.pricing-card a {
-    text-decoration: none;
+.pricing-card a {    
     color: #0a1836;
-    font-weight: 500;
-    transition: color 0.2s ease;
+    font-weight: 500;    
     display: inline-block;
     padding: 2px 0;
 }
