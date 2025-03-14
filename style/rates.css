@@ -104,8 +104,7 @@ td:nth-child(odd) {
   font-size: 16px;
   cursor: pointer;
   margin-top: 15px;
-  font-weight: bold;
-  transition: background-color 0.3s;
+  font-weight: bold;  
 }
 
 .pricing-card button:hover {
@@ -125,22 +124,6 @@ td:nth-child(odd) {
 
 .pricing-card td a {
     position: relative;
-}
-
-.pricing-card td a::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 1px;
-    bottom: 0;
-    left: 0;
-    background-color: #ffd51c;
-    transform: scaleX(0);
-    transition: transform 0.3s ease;
-}
-
-.pricing-card td a:hover::after {
-    transform: scaleX(1);
 }
 
 /* Responsive Design for Section 6 */
