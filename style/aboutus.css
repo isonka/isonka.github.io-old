@@ -1,9 +1,12 @@
 /* Section Three Styles */
 #section-three {
-    background-image: url('../assets/images/about-us.jpg'); /* Replace with your image path */
+    background-image: url('../assets/images/about-us-web.jpg'); /* Desktop image */
+    @media (max-width: 768px) {
+        background-image: url('../assets/images/about-us.jpg'); /* Mobile image */
+    }
     background-size: cover; /* Cover entire section */
-    background-position: top; /* Center the background image */
-    height: 700px; /* Fixed height for the section */            
+    background-position: center; /* Center the background image */
+    height: 800px; /* Fixed height for the section */
     position: relative;
     padding: 0; /* Remove padding for full width */
     overflow: hidden;
