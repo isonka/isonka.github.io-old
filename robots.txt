@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /js/
+Disallow: /style/
+Allow: /
+
+Sitemap: https://www.ptstudio7amsterdam.nl/sitemap.xml
