@@ -128,18 +128,28 @@ nav a:hover::after {
     }
 
     #section2 {
-        grid-template-columns: 1fr;        
-        gap: 2rem;
+        padding: 5rem 1rem 3rem;
         text-align: center;
-        flex: 1; /* Take half the width */
+        min-height: auto;
     }
 
     #section2 .right {
+        padding: 1rem;
         align-items: center;
+        height: 500px;
     }
 
-    .btn {
-        padding: 12px 30px;
+    #section2 .right h1 {
+        font-size: 2rem;
+    }
+
+    #section2 .right p {
+        font-size: 1rem;
+    }
+
+    #section2 .right .btn {
+        align-self: center;
+        margin-top: 1.5rem;        
     }
 }
 
@@ -148,10 +158,12 @@ nav a:hover::after {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 4rem 2rem;
+    padding: 6rem 2rem;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     flex-wrap: wrap;
+    z-index: 2;
+    margin-bottom: 2rem;
 }
 
 #section2 .left {
@@ -172,16 +184,42 @@ nav a:hover::after {
     flex: 2;
     padding: 2rem;
     min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
 #section2 .right h1 {
     font-size: 3.5rem;
-    margin-bottom: 1.5rem;
+    margin: 0;
 }
 
 #section2 .right p {
     font-size: 1.2rem;
-    margin-bottom: 2rem;
+    margin: 0;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 15px 40px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1rem;
+    align-self: flex-start;
+    margin-top: 1rem;
+    z-index: 3;
+}
+
+.btn:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 @media (max-width: 768px) {
