@@ -1,123 +1,176 @@
 /* Section 7: Workouts */
 .workouts-section {
-  padding: 40px 0px;
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  align-items: center;
+    padding: 6rem 5%;
+    background: white;
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(200px, 1fr) 3fr;
+    gap: 4rem;
+    overflow: hidden;
+    min-height: 100vh;
 }
 
-.section-title {    
-  font-size: 48px;
-  font-weight: bold;
-  margin-bottom: 30px;
-  text-align: left;
-  width: 80%;
+.workouts-title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.workouts-content {
+    width: 100%;
+}
+
+.section-title {
+    text-align: left;
+    margin-bottom: 2rem;
+    width: 100%;
+    position: relative;
+}
+
+.section-title:after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--primary-color);
+    margin: 1rem 0;
+    text-align: left;
 }
 
 .workout-grid {
-  display: grid;
-  grid-template-columns: 300px 300px 300px;
-  gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    margin: 0;
+    padding: 0;
+    width: 100%;
 }
 
 .workout-card {
-  display: flex;
-  flex-direction: column;
-  border: 4px solid #000;    
-  overflow: hidden;
+    width: 100%;
+    min-width: 200px;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.workout-card:hover {
+    transform: translateY(-5px);
 }
 
 .workout-card img {
-  width: 100%;
-  height: 200px;    
-  object-fit:cover;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.workout-card:hover img {
+    transform: scale(1.1);
 }
 
 .workout-info {
-  padding: 20px;
+    padding: 2rem;
+    background: white;
+    position: relative;
 }
 
-.workout-info h2 {    
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 10px;
+.workout-info h3 {
+    margin: 0 0 1rem;
+    color: #1a1a1a;
+    font-size: 1.5rem;
 }
 
-.workout-info p {    
-  font-size: 18px;    
+.workout-info p {
+    margin: 1rem 0 0;
+    color: #666;
+    line-height: 1.6;
 }
 
-/* Number Overlay */
+.workout-info::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: var(--primary-color);
+}
+
 .number-overlay {
-  position: absolute; 
-  font-size: 180px;
-  font-weight: bold;
-  color: #ffd51c;
-  bottom: 10%;
-  right: 10%;
-  z-index: -1;
+    position: absolute;
+    right: -5%;
+    bottom: -10%;
+    font-size: 25rem;
+    font-weight: 700;
+    color: rgba(0,0,0,0.03);
+    z-index: 0;
+    pointer-events: none;
 }
 
 /* Responsive Adjustments */
+@media (max-width: 1200px) {
+    .workout-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
 @media (max-width: 768px) {
-  .workouts-section {    
-    padding: 0;
-    padding-bottom: 20px;
-    background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    align-items: center;
-  }
+    .workouts-section {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 4rem 20px;
+        min-height: auto;
+    }
+
+    .workouts-title {
+        text-align: center;
+        align-items: center;
+    }
+
+    .section-title {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .section-title:after {
+        margin: 1rem auto;
+    }
+
+    .workout-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .workout-card {
+        width: 100%;
+        margin: 0 auto;
+        max-width: 400px;
+    }
+
+    .workout-card img {
+        height: 250px;
+    }
+
+    .workout-info {
+        padding: 1.5rem;
+    }
+
+    .workout-info h3 {
+        font-size: 1.3rem;
+    }
+
+    .number-overlay {
+        font-size: 15rem;
+    }
 
   .section-title {
     font-size: 36px;
     text-align: center;
   }
-
-  .number-overlay {
-    font-size: 120px;
-    bottom: 5%;
-    right: 5%;
-  }
-  
-
-  .workout-card img {
-      height: 80%;
-      object-fit:cover;
-    }
-
-  .workout-grid {
-      display: flex;
-      flex-direction: column;
-      width: 80%;
-      grid-template-columns: 1fr;
-      column-gap: 20px;
-  }
-
-  .workout-info p {
-    font-size: 16px;
-  }
-
-  #section1 p {
-    font-size: 40px;
-    width: 60%;
-    color: white;
-    text-align: center;
-    z-index: 2; /* Ensure text is above overlay */
-  }
-
-  #section2 .right h1 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    color: black;
-}
-
-#section2 .right p {
-    font-size: 1rem;
-    margin-bottom: 20px;
-    color: black;    
-}
 }

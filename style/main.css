@@ -5,3 +5,219 @@
 @import url("stylesheet.css");
 @import url("workouts.css");
 @import url("trainers.css");
+:root {
+    --primary-color: #ffd700;
+    --text-color: #333;
+    --background-light: #fff;
+    --background-dark: #1a1a1a;
+    --accent-color: #e5c100;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-light);
+    overflow-x: hidden;
+}
+
+/* Modern Navigation Bar */
+nav {
+    background-color: black;
+    padding: 1.2rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+    transition: var(--transition);
+}
+
+nav.scrolled {
+    padding: 0.8rem 0;
+    background-color: rgba(255, 255, 255, 0.98);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+}
+
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: var(--transition);
+    padding: 0.5rem 0;
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: var(--primary-color);
+    transition: var(--transition);
+    transform: translateX(-50%);
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        gap: 0.8rem;
+        padding: 0 1rem;
+    }
+
+    nav a {
+        font-size: 0.70rem;
+    }
+
+    #section1 p {
+        font-size: 2rem;
+        padding: 0 1.5rem;
+    }
+
+    #section2 {
+        grid-template-columns: 1fr;        
+        gap: 2rem;
+        text-align: center;
+        flex: 1; /* Take half the width */
+    }
+
+    #section2 .right {
+        align-items: center;
+    }
+
+    .btn {
+        padding: 12px 30px;
+    }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Scroll Animations */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.animate-on-scroll.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.animate-delay-1 {
+    transition-delay: 0.2s;
+}
+
+.animate-delay-2 {
+    transition-delay: 0.4s;
+}
+
+.animate-delay-3 {
+    transition-delay: 0.6s;
+}
+
+/* Slide animations */
+.slide-in-left {
+    transform: translateX(-100px);
+}
+
+.slide-in-right {
+    transform: translateX(100px);
+}
+
+.slide-in-left.animate,
+.slide-in-right.animate {
+    transform: translateX(0);
+}
+
+/* Scale animations */
+.scale-up {
+    transform: scale(0.8);
+}
+
+.scale-up.animate {
+    transform: scale(1);
+}
+
+/* Fade animations */
+.fade-in {
+    opacity: 0;
+}
+
+.fade-in.animate {
+    opacity: 1;
+}
+
+/* Rotate animations */
+.rotate-in {
+    transform: rotate(-10deg);
+    opacity: 0;
+}
+
+.rotate-in.animate {
+    transform: rotate(0);
+    opacity: 1;
+}
+
+/* Widget Container Styles */
+.mindbody-widget {
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}

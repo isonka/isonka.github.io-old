@@ -1,164 +1,199 @@
 /* Section 6: Rates */
 .rates-section {
-  padding: 40px 0px;
-  background-color: #ffd51c;
-  color: black;
-  display: flex;
-  flex-direction: column;
-  font-family: 'helvetica_worldregular';
-  width: 100%;
-}
-
-.rates-section .rates-header {
-  display: flex;        
-  flex-direction: row;
-  text-align: left;
-  margin-bottom: 40px;
-  gap: 20px;
-}
-
-.rates-section .header h1 {
-  font-size: 48px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.rates-section .header p {
-  font-size: 16px;
-  line-height: 1.6;
-}
-
-.rates-section .header a {
-  color: #0a1836;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-/* Pricing Cards */
-.pricing-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;    
-  margin-top: 20px;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.pricing-card {
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  padding: 15px;
-  width: 220px;
-  text-align: left;
-}
-
-.group-class {
-  border: 2px solid #ffd51c;
-  width: 220px;
-}
-
-table {    
-  border-collapse: collapse;
-  width: 100%;
-  height: auto;
-  margin-top: 5px;
-}
-
-td, th {    
-  text-align: left;   
-  padding: 4px 0;     
-}
-
-td:nth-child(even) {
-  text-align: center;
-  width: 80px;
-}
-
-td:nth-child(odd) {
-  display: list-item;
-  list-style-position: inside;
-  width: 120px;
-}
-
-.pricing-card h2 {
-  font-size: 18px;
-  margin-bottom: 8px;
-}
-
-.pricing-card ul {    
-  padding: 0;
-  margin: 0;
-  font-size: 16px;
-  line-height: 1.8;
-  list-style-position: inside;
-}
-
-.pricing-card button {
-  background-color: #ffd51c;
-  color: #0a1836;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 20px;
-  font-size: 16px;
-  cursor: pointer;
-  margin-top: 15px;
-  font-weight: bold;  
-}
-
-.pricing-card button:hover {
-  background-color: #e3b718;
-}
-
-.pricing-card a {    
-    color: #0a1836;
-    font-weight: 500;    
-    display: inline-block;
-    padding: 2px 0;
-}
-
-.pricing-card a:hover {
-    color: #ffd51c;
-}
-
-.pricing-card td a {
-    position: relative;
-}
-
-/* Responsive Design for Section 6 */
-@media (max-width: 768px) {
-  .rates-section {
-    padding: 0;
+    padding: 6rem 5%;
     background-color: #ffd51c;
     color: black;
     display: flex;
     flex-direction: column;
     font-family: 'helvetica_worldregular';
-  }
-  
-  .rates-section .header h1 {
-    font-size: 36px;      
-    text-align: center;
-  }
+    width: 100%;
+}
 
-  .rates-section .rates-header {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      grid-template-columns: 1fr;
-      margin-bottom: -10px;
-      padding-left: 10px;
-      padding-right: 10px;
+.rates-header {
+    max-width: 1200px;
+    margin: 0 auto 4rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 769px) {
+    .rates-header {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+    }
+    
+    .header {
+        width: 100%;
+        text-align: center;
+    }
+
+    .pricing-card.intro-class,
+    .pricing-card.group-class {
+        flex: 0 1 300px;
+        margin: 0;
+    }
+}
+
+.header {
+    margin-bottom: 4rem;
+}
+
+.header h2 {
+    margin-bottom: 2rem;
+}
+
+.header p {
+    max-width: 800px;
+    margin: 1rem auto;
+    color: #666;
+}
+
+.header a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Pricing Cards */
+.pricing-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.pricing-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2.5rem 2rem;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+}
+
+.pricing-card h3 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #1a1a1a;
+    position: relative;
+}
+
+.pricing-card h3:after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 2px;
+    background: var(--primary-color);
+    margin: 1rem auto;
+}
+
+.pricing-card table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.pricing-card td {
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+    color: #666;
+}
+
+.pricing-card td:last-child {
+    text-align: right;
+    font-weight: 500;
+    color: #1a1a1a;
+}
+
+.group-class td:first-child {
+    text-align: left;
+}
+
+.pricing-card tr:last-child td {
+    border-bottom: none;
+}
+
+.pricing-card a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.pricing-card a:hover {
+    color: var(--primary-color);
+}
+
+.intro-class {
+    background: linear-gradient(135deg, #fff8e1 0%, #fff 100%);
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsive Design for Section 6 */
+@media (max-width: 768px) {
+    .rates-section {
+        padding: 4rem 0;
+        background-color: #ffd51c;
+        color: black;
+        display: flex;
+        flex-direction: column;
+        font-family: 'helvetica_worldregular';
+    }
+    
+    .rates-section .header h1 {
+        font-size: 36px;      
+        text-align: center;
+    }
+
+    .rates-section .header {
+        padding: 0 20px;
+    }
+
+    .rates-section .rates-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        grid-template-columns: 1fr;
+        margin-bottom: -10px;
+        width: 100%;
+        padding: 20px;
     }
 
     .group-class {
-      border: 4px solid #ffd51c;
-      width: 250px;
+        padding: 20px;
+        border: 4px solid #ffd51c;
+        width: calc(100% - 40px);
+        max-width: none;
+        margin: 10px 20px;
     }
 
-  .pricing-container {
-    grid-template-columns: 1fr;
-    padding-bottom: 20px;
-  }
+    .pricing-container {
+        grid-template-columns: 1fr;
+        padding: 20px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .pricing-card {
+        padding: 2rem 1.5rem;
+        width: calc(100% - 40px);
+        max-width: none;
+        margin: 10px 20px;
+        box-sizing: border-box;
+    }
+    
+    .intro-class {
+        max-width: none;
+        width: calc(100% - 40px);
+    }
 }

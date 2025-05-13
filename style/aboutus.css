@@ -1,132 +1,166 @@
 /* Section Three Styles */
 #section-three {
     background-image: url('../assets/images/about-us-web.jpg'); /* Desktop image */
-    @media (max-width: 768px) {
-        background-image: url('../assets/images/about-us.jpg'); /* Mobile image */
-    }
     background-size: cover; /* Cover entire section */
-    background-position: center; /* Center the background image */
-    height: 800px; /* Fixed height for the section */
+    background-position: center left; /* Center the background image */
+    background-attachment: fixed;
+    height: 90vh;
+    min-height: 800px;
     position: relative;
     padding: 0; /* Remove padding for full width */
     overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#section-three::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    bottom: 0;
+    background: linear-gradient(to right, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 100%);
+    z-index: 1;
 }
 
 /* Content Wrapper */
 #section-three .content {
-    position: absolute;     
+    position: relative;
+    z-index: 2;
     display: flex; /* Flexbox for vertical alignment */
     flex-direction: column; /* Stack bubbles vertically */
-    flex-wrap: wrap;
-    left: 20px;
-    top: 55px;
-    align-items: baseline;
-    gap: 30px; /* Space between bubbles */    
+    gap: 40px; /* Space between bubbles */
+    padding-left: 10%;
+    margin-left: 0;
+    width: 50%;
+    max-width: 600px;
 }
 
 /* Bubble Styles */
 #section-three .bubble {
-    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */    
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    padding: 10px; /* Add padding inside the bubble */  
-    left: 20px;
-    top: 55px;  
-    color: #333; /* Text color */
-    line-height: 1.6; /* Improve readability */        
-    text-align: left; /* Left-align text */    
-    display: flex; /* Use flexbox for bubble content */
-    flex-direction: column; /* Stack elements vertically */    
+    opacity: 0;
+    transform: translateX(20px);
+    animation: fadeInSlide 0.8s ease forwards;
+    padding: 30px;
+    border-radius: 4px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    backdrop-filter: blur(5px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+#section-three .bubble:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
 /* Wide Bubble */
 #section-three .wide-bubble {
-    font-size: 1.1rem; /* Slightly larger font for emphasis */
-    background-color: rgba(255, 213, 28, 0.7);
-    max-width: 350px;
-    text-align: left; /* Align text to the left */    
+    background-color: rgba(255, 213, 28, 0.80);    
+    max-width: 500px;
+    animation-delay: 0.4s;
+    margin-left: 0;
 }
 
 #section-three .wide-bubble .title {
-    font-size: 50px; /* Slightly larger font for emphasis */
-    padding-top: 20px;
-    line-height: 1;
-    padding-right: 40px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 42px; /* Slightly larger font for emphasis */
+    line-height: 1.2;
     margin: 0;
+    color: #1a1a1a;
 }
 
 #section-three .wide-bubble p { 
-    padding-top: 20px;   
-    padding-right: 40px;
-    margin: 0;
-    font-size: 16px; /* Slightly larger font for emphasis */
+    font-size: 17px; /* Slightly larger font for emphasis */
+    line-height: 1.7;
+    margin: 20px 0 0;
+    color: #333;
 }
 
 /* Small Bubble */
 #section-three .small-bubble {
-    font-size: 1rem; /* Regular font size */
-    background-color: black;
-    border-color: white;
+    background-color: rgba(0,0,0,0.75);
     color: white;
-    text-align: left;    
+    width: fit-content;
+    padding: 25px 35px;
+    animation-delay: 0.2s;
+    margin-left: 0;
 }
 
 #section-three .small-bubble .title {
-    font-size: 16px; /* Slightly larger font for emphasis */
-    font-weight: bold;
-    padding-right: 40px;
+    font-size: 18px; /* Slightly larger font for emphasis */
+    font-weight: 600;
     margin: 0;
+    color: white;
+    letter-spacing: 1px;
 }
 
 #section-three .small-bubble p {
-    max-width: 180px;
-    padding-right: 40px;
-    margin: 0;
-    font-size: 18px; /* Slightly larger font for emphasis */
+    font-size: 16px; /* Slightly larger font for emphasis */
+    margin: 10px 0 0;
+    opacity: 0.9;
+    color: white;
+    max-width: 220px;
+    line-height: 1.6;
 }
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     #section-three {        
-        padding: 0; /* Remove padding for full width */
-        height: 700px;
+        background-image: url('../assets/images/about-us.jpg'); /* Mobile image */
+        height: auto;
+        min-height: 100vh;
+        background-attachment: scroll;
+        background-position: top center;
+        padding: 60px 20px;
+        justify-content: center;
+    }
+
+    #section-three::before {
+        width: 100%;
+        background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 100%);
     }
 
     #section-three .content {
-        position: absolute;     
-        display: flex; /* Flexbox for vertical alignment */
-        flex-direction: column; /* Stack bubbles vertically */
-        flex-wrap: wrap;        
-        align-items: left;
-        gap: 30px; /* Space between bubbles */    
-        bottom: 20px;
+        width: 100%;
+        padding: 20px;
+        margin: 0;
     }
 
     #section-three .bubble {
-        width: 90%; /* Take full width on smaller screens */        
+        width: 100%; /* Take full width on smaller screens */
+        max-width: none;
+        margin: 0;
     }
 
     #section-three .wide-bubble {
         max-width: 300px;
+        padding: 25px;
     }
 
     #section-three .wide-bubble .title {
-        font-size: 30px; /* Slightly larger font for emphasis */
-        padding-top: 20px;
-        line-height: 1;
-        padding-right: 40px;
-        margin: 0;
+        font-size: 32px; /* Slightly larger font for emphasis */
     }   
 
     /* Small Bubble */
     #section-three .small-bubble {
-        font-size: 1rem; /* Regular font size */
-        background-color: black;
-        border-color: white;
-        color: white;
-        text-align: left;
-        max-width: 180px;
+        padding: 20px 25px;
     }
 
     #section-three .small-bubble p {
         padding-right: 10px;
+        font-size: 16px;
+    }
+}
+
+@keyframes fadeInSlide {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
     }
 }

@@ -1,74 +1,143 @@
-#section8 .right {   
-    display: flex;
-    align-items: center;
-    justify-content: center;        
-}
-
-/* Right Section (Text and Button) */
-#section8 .left {    
-    height: 500px; /* Set a fixed height */
-    display: flex;
-    flex-direction: column; /* Stack items vertically */
-    align-items: baseline;
-    justify-content: left;
-    text-align: left;
-    padding: 100px;
-    color: white;
-    gap: -10px;
-}
-
-#section8 .left h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 10px;
-}
-
 #section8 {
-    display: grid; /* Use grid layout */
-    grid-template-columns: repeat(2, 1fr); /* Two columns of reviews */
-    flex-wrap: nowrap;
-    overflow: hidden;
-    height: 700px; /* Adjust height to fit content */
-    position: relative; /* Set as the relative container for positioning the "7" */
-    background-color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    padding: 6rem 5%;
+    background: black;
+    position: relative;
+    overflow: hidden;    
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 1rem;
+}
+
+.left h2 {
+    font-size: 2.8rem;    
+    position: relative;
+    color: white;
+}
+
+.left h2:after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--primary-color);
+    margin-top: 1rem;
+}
+
+.left p {
+    font-size: 1.1rem;
+    color: white;
+    line-height: 1.6;
 }
 
 .social {
     display: flex;
-    flex-direction: row;
     align-items: center;
-    justify-content: center;
-    margin-top: -5px;
+    gap: 0.5rem;    
+    transition: var(--transition);
+}
+
+.social:hover {
+    transform: translateX(10px);
 }
 
 .social img {
-    width: 30px;
-    height: 30px;    
-    margin-right: 10px;
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.social a {
+    text-decoration: none;
+    color: #666;
+    font-size: 1.1rem;
+    transition: var(--transition);
+}
+
+.social a:hover {
+    color: var(--primary-color);
 }
 
 .social p {
-    font-size: 1rem;
-    color: white;
-    margin-top: 10px;
+    margin: 0;
 }
 
-/* Responsive Adjustments */
+.right {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right iframe {
+    width: 100%;
+    height: 450px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.logo {
+    margin-top: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: rotate(7deg);
+}
+
 @media (max-width: 768px) {
     #section8 {
-        grid-template-columns: 1fr; /* One column on smaller screens */
-        height: auto; /* Adjust height to fit content */
-        display: flex;
-        flex-direction: column;        
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 4rem 1rem;
     }
 
-    #section8 .left {
-        flex-direction: column; /* Stack photo and content vertically */        
-        text-align: left; /* Center align text */      
-        height: 380px;          
-    }    
-    #section8 .right {
-        width: 100%;
-        height: 100%;
+    .left {
+        padding: 1rem;
+        text-align: center;
+        align-items: center;
+    }
+
+    .left h2:after {
+        margin: 1rem auto 0;
+    }
+
+    .social {
+        justify-content: center;
+    }
+
+    .social:hover {
+        transform: translateX(0) translateY(-5px);
+    }
+
+    .right iframe {
+        height: 350px;
+    }
+}
+
+/* Prospect Section */
+#section-prospect {
+    padding: 4rem 5%;    
+}
+
+/* Animation for elements */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
