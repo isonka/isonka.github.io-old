@@ -57,7 +57,7 @@
 
 /* Wide Bubble */
 #section-three .wide-bubble {
-    background-color: rgba(255, 213, 28, 0.80);    
+    background-color: rgba(255, 213, 28, 0.70);    
     max-width: 500px;
     animation-delay: 0.4s;
     margin-left: 0;
@@ -80,7 +80,7 @@
 
 /* Small Bubble */
 #section-three .small-bubble {
-    background-color: rgba(0,0,0,0.75);
+    background-color: rgba(0,0,0,0.70);
     color: white;
     width: fit-content;
     padding: 25px 35px;
