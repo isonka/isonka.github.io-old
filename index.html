@@ -6,7 +6,6 @@
 <script>
     window.scrollTo = function () {};
 </script>
-<script src="js/textReplacer.js"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -39,35 +38,84 @@
     <meta name="twitter:title" content="PT Studio 7 - Personal Training Studio in Amsterdam | Reformer Pilates & Functional Training">
     <meta name="twitter:description" content="Your dedicated personal training studio in Amsterdam, specializing in reformer Pilates and functional training for all fitness levels.">
     <meta name="twitter:image" content="./assets/images/pt7logo.png">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
+        
         h1, h2, h3, .section-title {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+            letter-spacing: -0.02em;
         }
-        /* Footer styling */
+        
+        h1 {
+            font-size: 3.5rem;
+            line-height: 1.2;
+        }
+        
+        h2 {
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .btn {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            padding: 12px 32px;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+        }
+       /* Footer styling */
         footer {
-            background-color: #333;
+            background-color: #1a1a1a;
             color: #fff;
-            padding: 20px;
+            padding: 40px 20px;
             text-align: center;
         }
+        
         footer ul {
             list-style: none;
             padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
         }
+        
         footer ul li {
-            display: inline;
-            margin: 0 10px;
+            margin: 0;
         }
+        
         footer ul li a {
             color: #ffd700;
             text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
         }
+        
         footer ul li a:hover {
-            text-decoration: underline;
+            color: #fff;
+            text-decoration: none;
         }
     </style>
     <script type="application/ld+json">
@@ -255,52 +303,56 @@
         </div>
     </div>
 </section>
-<section id="workouts-section" class="workouts-section">
-    <h2 class="section-title">Workouts</h2>
-    <div class="workout-grid">
-      <div class="workout-card">
-        <img src="./assets/images/pilates.jpg" alt="Pilates workout">
-        <div class="workout-info">
-          <h3>Pilates</h3>
-          <div style="border: 2px solid #000;"></div>
-          <p>Be mindful of your body; learn how to control it and maintain the balance between mind and body</p>
+<div id="workouts-section" class="workouts-section">
+    <div class="workouts-title">
+      <h2 class="section-title">Workouts</h2>
+    </div>
+    <div class="workouts-content">
+      <div class="workout-grid">
+        <div class="workout-card">
+          <img src="./assets/images/pilates.jpg" alt="Pilates workout">
+          <div class="workout-info">
+            <h3>Pilates</h3>
+            <div style="border: 2px solid #000;"></div>
+            <p>Be mindful of your body; learn how to control it and maintain the balance between mind and body</p>
+          </div>
         </div>
-      </div>
-      <div class="workout-card">
-        <img src="./assets/images/trx.jpg" alt="TRX Training">
-        <div class="workout-info">
-          <h3>TRX Training</h3>
-          <div style="border: 2px solid #000;"></div>
-          <p>With TRX workouts, you can experience effective functional training and get in shape quickly</p>
+        <div class="workout-card">
+          <img src="./assets/images/trx.jpg" alt="TRX Training">
+          <div class="workout-info">
+            <h3>TRX Training</h3>
+            <div style="border: 2px solid #000;"></div>
+            <p>With TRX workouts, you can experience effective functional training and get in shape quickly</p>
+          </div>
         </div>
-      </div>
-      <div class="workout-card">
-        <img src="./assets/images/ems.jpg" alt="EMS Training">
-        <div class="workout-info">
-          <h3>EMS Training</h3>
-          <div style="border: 2px solid #000;"></div>
-          <p>With electro-muscular stimulation (EMS) workouts, you can achieve far greater muscle contractions than ever before, all in just 25 minutes</p>
+        <div class="workout-card">
+          <img src="./assets/images/ems.jpg" alt="EMS Training">
+          <div class="workout-info">
+            <h3>EMS Training</h3>
+            <div style="border: 2px solid #000;"></div>
+            <p>With electro-muscular stimulation (EMS) workouts, you can achieve far greater muscle contractions than ever before, all in just 25 minutes</p>
+          </div>
         </div>
-      </div>
-      <div class="workout-card">
-        <img src="./assets/images/free.jpg" alt="Free weights">
-        <div class="workout-info">
-          <h3>Free weights</h3>
-          <div style="border: 2px solid #000;"></div>
-          <p>Get stronger</p>
+        <div class="workout-card">
+          <img src="./assets/images/free.jpg" alt="Free weights">
+          <div class="workout-info">
+            <h3>Free weights</h3>
+            <div style="border: 2px solid #000;"></div>
+            <p>Get stronger</p>
+          </div>
         </div>
-      </div>
-      <div class="workout-card">
-        <img src="./assets/images/cardio.jpg" alt="Cardio">
-        <div class="workout-info">
-          <h3>Cardio</h3>
-          <div style="border: 2px solid #000;"></div>
-          <p>Burn more calories with HIIT workouts</p>
+        <div class="workout-card">
+          <img src="./assets/images/cardio.jpg" alt="Cardio">
+          <div class="workout-info">
+            <h3>Cardio</h3>
+            <div style="border: 2px solid #000;"></div>
+            <p>Burn more calories with HIIT workouts</p>
+          </div>
         </div>
       </div>
     </div>
     <div class="number-overlay">7</div>
-  </section>
+  </div>
     <section id="rates-section" class="rates-section">
         <div class="rates-header">
             <div class="header">
@@ -430,7 +482,7 @@
             </div>
             <div class="social">
                 <a href="tel:0685162693" target="_blank">
-                    <img src="./assets/images/phone.jpg" alt="Phone icon">
+                    <img src="https://img.icons8.com/ios-filled/40/ffffff/phone.png" alt="Phone icon" style="background: #ffd700; border-radius: 50%; padding: 4px; width: 24px; height: 24px;">
                 </a>
                 <a href="tel:0685162693" target="_blank" style="text-decoration:none">
                     <p>06 85 16 26 93</p>                
@@ -438,13 +490,13 @@
             </div>
             <img src="./assets/images/pt7logo.png" style="width: 150px; height: 150px;" alt="Logo" class="logo">
         </div>        
-        <div class="right"></div>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2436.7239958408204!2d4.876257777138345!3d52.3572909720188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c6090de92c90df%3A0xe44c5d7c1eae1d19!2sPT%20Studio%207!5e0!3m2!1sen!2snl!4v1732445893649!5m2!1sen!2snl" height="450" width="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            
-        </div>        
+        <div class="right">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2436.7239958408204!2d4.876257777138345!3d52.3572909720188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c6090de92c90df%3A0xe44c5d7c1eae1d19!2sPT%20Studio%207!5e0!3m2!1sen!2snl!4v1732445893649!5m2!1sen!2snl" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            
+        </div>
     </section>
     <section id="section-prospect" style="background-color: #ffd700;">
         <script src="https://widgets.mindbodyonline.com/javascripts/healcode.js" type="text/javascript"></script>
-<healcode-widget data-type="prospects" data-widget-partner="object" data-widget-id="2b54789c036" data-widget-version="0" style="width: 100%; margin-top: 40px;"></healcode-widget>
+<healcode-widget data-type="prospects" data-widget-partner="object" data-widget-id="2b54789c036" data-widget-version="0" style="width: 100%; margin-top: 40px; background-color: transparent;"></healcode-widget>
     </section>    
     <footer>        
         <ul>            
