@@ -1,6 +1,5 @@
 @import url("aboutus.css");
 @import url("contact.css");
-@import url("rates.css");
 @import url("review.css");
 @import url("stylesheet.css");
 @import url("workouts.css");
@@ -354,4 +353,60 @@ nav a:hover::after {
     background: white;
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Pricing redirect section */
+.section-redirect {
+    background-color: #f8f8f8;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.section-redirect .container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.section-redirect h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.section-redirect p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #ffd700;
+    color: #000;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.cta-button:hover {
+    background-color: #e6c200;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+    .section-redirect {
+        padding: 60px 20px;
+    }
+    
+    .section-redirect h2 {
+        font-size: 2rem;
+    }
+    
+    .section-redirect p {
+        font-size: 1rem;
+    }
 }
