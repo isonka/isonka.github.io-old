@@ -16,8 +16,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PT Studio 7</title>
-    <link rel="stylesheet" href="./style/main.css">
-    <link rel="stylesheet" href="./style/rates_modern.css">         
+    <link rel="stylesheet" href="./style/main.css">    
    <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -154,16 +153,7 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <!-- Navigation Bar -->
-    <nav>
-        <ul>            
-            <li><a href="#section-mindbody" aria-label="Book a session">Book</a></li>
-            <li><a href="#section-three" aria-label="Learn about us">About Us</a></li>
-            <li><a href="#reviews" aria-label="Read reviews">Reviews</a></li>
-            <li><a href="#workouts-section" aria-label="Explore workouts">Workouts</a></li>
-            <li><a href="pricing.html" aria-label="View pricing">Prices</a></li>
-            <li><a href="#section8" aria-label="Contact us">Contact</a></li>
-        </ul>
-    </nav>
+   <div id="navbar-container"></div>
 
     <!-- Sections -->
     <section id="section1">
@@ -223,49 +213,60 @@
       <p>Meet our experienced and passionate trainers, each specializing in different areas of fitness and well-being. We are here to support your journey at every level.</p>
     </div>
     <div class="trainers-list">
-      <div class="trainer-card">
-        <img src="./assets/images/pt7logo.png" alt="Elif Arzu Ogan">
-        <h3>Elif Arzu Ogan</h3>
-        <p>Owner & Head Trainer<br>Senior Polestar Pilates Instructor<br>Miha BodyTec EMS Advance Trainer<br>TRX & Functional Training Instructor</p>
-        <ul class="trainer-languages">
-          <li>English</li>
-          <li>Turkish</li>        
-        </ul>
-      </div>
-      <div class="trainer-card">
-        <img src="./assets/images/pt7logo.png" alt="Yeşim Kaya">
-        <h3>Goknur Dipli</h3>
-        <p>Senior Polestar Pilates Instructor<br>Miha BodyTec EMS Advance Trainer<br>TRX & Functional Training Instructor</p>
-        <ul class="trainer-languages">          
-          <li>Turkish</li>
-        </ul>
-      </div>
-      <div class="trainer-card">
-        <img src="./assets/images/pt7logo.png" alt="Cansu Topçu">
-        <h3>Gokben Oztekin</h3>
-        <p>Basi Pilates Instructor</p>
-        <ul class="trainer-languages">
-          <li>English</li>
-          <li>Turkish</li>
-        </ul>
-      </div>
-      <div class="trainer-card">
-        <img src="./assets/images/pt7logo.png" alt="Su Çağla Albayrak">
-        <h3>Lysette Portano</h3>
-        <p>Basi Pilates Instructor</p>
-        <ul class="trainer-languages">
-          <li>English</li>
-          <li>Spanish</li>          
-        </ul>
-      </div>
-      <div class="trainer-card">
-        <img src="./assets/images/pt7logo.png" alt="Tuğçe Eskili">
-        <h3>Kristen Hollinsworth</h3>
-        <p>Smartbody Pilates Instructor</p>
-        <ul class="trainer-languages">
-          <li>English</li>        
-        </ul>
-      </div>
+      <a href="elif-arzu-ogan.html" class="trainer-link">
+        <div class="trainer-card">
+          <img src="./assets/images/pt7logo.png" alt="Elif Arzu Ogan">
+          <h3>Elif Arzu Ogan</h3>
+          <p>Owner & Head Trainer<br>Senior Polestar Pilates Instructor<br>Miha BodyTec EMS Advance Trainer<br>TRX & Functional Training Instructor</p>
+          <ul class="trainer-languages">
+            <li>English</li>
+            <li>Turkish</li>        
+          </ul>
+        </div>
+      </a>
+      <a href="goknur-dipli.html" class="trainer-link">
+        <div class="trainer-card">
+          <img src="./assets/images/pt7logo.png" alt="Goknur Dipli">
+          <h3>Goknur Dipli</h3>
+          <p>Senior Polestar Pilates Instructor<br>Miha BodyTec EMS Advance Trainer<br>TRX & Functional Training Instructor</p>
+          <ul class="trainer-languages">          
+            <li>Turkish</li>
+            <li>English</li>
+          </ul>
+        </div>
+      </a>
+      <a href="gokben-oztekin.html" class="trainer-link">
+        <div class="trainer-card">
+          <img src="./assets/images/pt7logo.png" alt="Gokben Oztekin">
+          <h3>Gokben Oztekin</h3>
+          <p>Basi Pilates Instructor</p>
+          <ul class="trainer-languages">
+            <li>English</li>
+            <li>Turkish</li>
+          </ul>
+        </div>
+      </a>
+      <a href="lysette-portano.html" class="trainer-link">
+        <div class="trainer-card">
+          <img src="./assets/images/pt7logo.png" alt="Lysette Portano">
+          <h3>Lysette Portano</h3>
+          <p>Basi Pilates Instructor</p>
+          <ul class="trainer-languages">
+            <li>English</li>
+            <li>Spanish</li>          
+          </ul>
+        </div>
+      </a>
+      <a href="kristen-hollinsworth.html" class="trainer-link">
+        <div class="trainer-card">
+          <img src="./assets/images/pt7logo.png" alt="Kristen Hollinsworth">
+          <h3>Kristen Hollinsworth</h3>
+          <p>Smartbody Pilates Instructor</p>
+          <ul class="trainer-languages">
+            <li>English</li>        
+          </ul>
+        </div>
+      </a>
     </div>
   </div>
 </section>
@@ -363,7 +364,7 @@
             <a href="pricing.html" class="cta-button">View All Pricing</a>
         </div>
     </section>
-    <section id="section8">
+    <section id="contact">
         <div class="left">
             <h2>We are here</h2>
             <p>Van Baerlestraat 76C, 1071BB</br>Amsterdam</p>                        
@@ -408,8 +409,15 @@
             <li><a href="#reviews">Reviews</a></li>
             <li><a href="#workouts-section">Workouts</a></li>
             <li><a href="pricing.html">Prices</a></li>
-            <li><a href="#section8">Contact</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </footer>    
+     <script>
+      fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('navbar-container').innerHTML = data;
+        });
+    </script>
 </body>
 </html>
