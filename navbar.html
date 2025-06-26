@@ -1,11 +1,73 @@
-<nav>
-        <ul>            
-            <li><a href="index.html#section-mindbody" aria-label="Book a session">Book</a></li>
-            <li><a href="index.html#section-three" aria-label="Learn about us">About Us</a></li>
-            <li><a href="index.html#reviews" aria-label="Read reviews">Reviews</a></li>
-            <li><a href="index.html#workouts-section" aria-label="Explore workouts">Workouts</a></li>
-            <li><a href="pricing.html" aria-label="View pricing">Prices</a></li>
-            <li><a href="equipment.html" aria-label="Explore workouts">Equipments</a></li>
-            <li><a href="index.html#contact" aria-label="Contact us">Contact</a></li>
-        </ul>
-    </nav>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PT Studio 7</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+  <div class="navbar-container">
+    <div class="navbar-logo">
+      <a href="index.html" aria-label="PT Studio 7 Home">
+        <img src="./assets/images/pt7logo.png" alt="PT Studio 7 Logo" style="height:48px;width:auto;vertical-align:middle;">
+      </a>
+    </div>
+    <button class="navbar-toggle" aria-label="Open menu" aria-expanded="false">
+      <span class="navbar-toggle-icon"></span>
+    </button>
+    <ul class="navbar-links">
+      <li><a href="index.html#section-mindbody" aria-label="Book a session">Book</a></li>
+      <li><a href="index.html#section-three" aria-label="Learn about us">About Us</a></li>
+      <li><a href="index.html#reviews" aria-label="Read reviews">Reviews</a></li>
+      <li><a href="index.html#workouts-section" aria-label="Explore workouts">Workouts</a></li>
+      <li><a href="pricing.html" aria-label="View pricing">Prices</a></li>
+      <li><a href="equipment.html" aria-label="Explore equipment">Equipment</a></li>
+      <li><a href="index.html#contact" aria-label="Contact us">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+<style>
+.navbar { background: #111; box-shadow: 0 2px 12px rgba(0,0,0,0.06); position: sticky; top: 0; z-index: 100; }
+.navbar-container { display: flex; align-items: center; justify-content: space-between; max-width: 1100px; margin: 0 auto; padding: 0 18px; height: 64px; }
+.navbar-logo img { height: 36px; }
+.navbar-links { display: flex; gap: 18px; list-style: none; margin: 0; padding: 0; }
+.navbar-links li a { color: #fff; text-decoration: none; font-weight: 500; font-size: 1.08rem; padding: 8px 0; transition: color 0.2s; }
+.navbar-links li a:hover { color: #ffd700; }
+.navbar-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; margin-left: 8px; }
+.navbar-toggle-icon { display: block; width: 28px; height: 3px; background: #fff; border-radius: 2px; position: relative; transition: background 0.2s; }
+.navbar-toggle-icon::before, .navbar-toggle-icon::after { content: ""; position: absolute; left: 0; width: 28px; height: 3px; background: #fff; border-radius: 2px; transition: transform 0.2s; }
+.navbar-toggle-icon::before { top: -9px; }
+.navbar-toggle-icon::after { top: 9px; }
+@media (max-width: 800px) {
+  .navbar-container { height: 56px; }
+  .navbar-links { position: absolute; top: 56px; left: 0; right: 0; background: #111; flex-direction: column; align-items: flex-start; gap: 0; box-shadow: 0 8px 24px rgba(0,0,0,0.08); padding: 0; display: none; }
+  .navbar-links.open { display: flex; }
+  .navbar-links li { width: 100%; }
+  .navbar-links li a { display: block; width: 100%; padding: 16px 24px; border-bottom: 1px solid #222; }
+  .navbar-toggle { display: block; }
+}
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const toggle = document.querySelector('.navbar-toggle');
+  const links = document.querySelector('.navbar-links');
+  toggle.addEventListener('click', function() {
+    const expanded = this.getAttribute('aria-expanded') === 'true';
+    this.setAttribute('aria-expanded', !expanded);
+    links.classList.toggle('open');
+  });
+  // Menüden bir linke tıklanınca menüyü kapat
+  document.querySelectorAll('.navbar-links a').forEach(link => {
+    link.addEventListener('click', function() {
+      if (window.innerWidth <= 800) {
+        links.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+});
+</script>
+</body>
+</html>
