@@ -1,4 +1,4 @@
-#section8 {
+#contact {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0.5rem;
@@ -94,7 +94,7 @@
 }
 
 @media (max-width: 768px) {
-    #section8 {
+    #contact {
         grid-template-columns: 1fr;
         gap: 2rem;
         padding: 4rem 1rem;

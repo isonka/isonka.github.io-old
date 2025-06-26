@@ -26,6 +26,131 @@ body {
     overflow-x: hidden;
 }
 
+/* NAVBAR (mobile hamburger menu dahil) */
+.navbar {
+    background: #111;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 18px;
+    height: 64px;
+    position: relative;
+}
+
+.navbar-logo img {
+    height: 48px;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 18px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.08rem;
+    padding: 8px 0;
+    transition: color 0.2s;
+}
+
+.navbar-links li a:hover {
+    color: #ffd700;
+}
+
+.navbar-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    margin-left: 8px;
+    z-index: 102;
+}
+
+.navbar-toggle-icon {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background: #fff;
+    border-radius: 2px;
+    position: relative;
+    transition: background 0.2s;
+}
+
+.navbar-toggle-icon::before,
+.navbar-toggle-icon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 28px;
+    height: 3px;
+    background: #fff;
+    border-radius: 2px;
+    transition: transform 0.2s;
+}
+
+.navbar-toggle-icon::before {
+    top: -9px;
+}
+
+.navbar-toggle-icon::after {
+    top: 9px;
+}
+
+@media (max-width: 800px) {
+    .navbar-container {
+        height: 56px;
+    }
+
+    .navbar-links {
+        position: fixed;
+        top: 56px;
+        left: 0;
+        right: 0;
+        background: #111;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+        padding: 0;
+        display: none;
+        z-index: 101;
+    }
+
+    .navbar-links.open {
+        display: flex;
+    }
+
+    .navbar-links li {
+        width: 100%;
+    }
+
+    .navbar-links li a {
+        display: block;
+        width: 100%;
+        padding: 16px 24px;
+        border-bottom: 1px solid #222;
+    }
+
+    .navbar-toggle {
+        display: block;
+    }
+}
+
 /* Modern Navigation Bar */
 nav {
     position: fixed;
