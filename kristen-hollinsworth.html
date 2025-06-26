@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kristen Hollinsworth | PT Studio 7 Trainer</title>
+    <link rel="stylesheet" href="./style/main.css">
+    <style>
+        .trainer-profile-container { max-width: 700px; margin: 40px auto; background: #fff; border-radius: 16px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); padding: 32px; }
+        .trainer-profile-header { display: flex; flex-direction: column; align-items: center; }
+        .trainer-profile-header img { width: 160px; height: 160px; border-radius: 50%; border: 4px solid #ffd700; margin-bottom: 16px; }
+        .trainer-profile-header h1 { color: #1a1a1a; margin-bottom: 8px; }
+        .trainer-profile-header h2 { color: #ffd700; font-size: 1.2rem; margin-bottom: 16px; }
+        .trainer-profile-bio { color: #333; font-size: 1.1rem; line-height: 1.7; margin-bottom: 24px; }
+        .trainer-profile-cv { background: #f9f9f9; border-radius: 8px; padding: 20px; }
+        .trainer-profile-cv h3 { color: #1a1a1a; margin-bottom: 10px; }
+        .trainer-profile-cv ul { margin-left: 20px; }
+        .btn { display: inline-block; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; text-align: center; }
+        @media (max-width: 600px) { .trainer-profile-container { padding: 12px; } }
+    </style>
+</head>
+<body>
+    <!-- Navbar Include -->
+    <div id="navbar-container"></div>
+    <script>
+      fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('navbar-container').innerHTML = data;
+        });
+    </script>
+
+    <div class="trainer-profile-container">
+        <div class="trainer-profile-header">
+            <img src="./assets/images/pt7logo.png" alt="Kristen Hollinsworth">
+            <h1>Kristen Hollinsworth</h1>
+            <h2>Smartbody Pilates Instructor</h2>
+            <ul class="trainer-languages" style="margin-top:12px;">
+                <li>English</li>
+            </ul>
+        </div>
+        <div class="trainer-profile-bio">
+            <p>Kristen is a Smartbody Pilates Instructor who believes in empowering clients through mindful movement and strength training. She is committed to creating a positive and supportive environment for all.</p>
+        </div>
+        <div class="trainer-profile-cv">
+            <h3>Qualifications & Experience</h3>
+            <ul>
+                <li>Smartbody Pilates Instructor</li>
+                <li>Specializes in Pilates for strength and rehabilitation</li>
+                <li>Focuses on client empowerment and well-being</li>
+            </ul>
+        </div>
+        <div style="text-align:center; margin: 32px 0;">
+          <a href="index.html#section-mindbody" class="btn" style="background:#ffd700; color:#222; font-weight:600; border:none;">Book Now</a>
+        </div>
+    </div>
+</body>
+</html>

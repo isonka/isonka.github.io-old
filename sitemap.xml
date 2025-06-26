@@ -5,39 +5,55 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://www.ptstudio7amsterdam.nl/#section1</loc>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.ptstudio7amsterdam.nl/#section2</loc>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.ptstudio7amsterdam.nl/#section-mindbody</loc>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://www.ptstudio7amsterdam.nl/#section-three</loc>
-        <priority>0.7</priority>
+        <loc>https://www.ptstudio7amsterdam.nl/index.html</loc>
+        <priority>1.0</priority>
     </url>
     <url>
         <loc>https://www.ptstudio7amsterdam.nl/pricing.html</loc>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://www.ptstudio7amsterdam.nl/#reviews</loc>
+        <loc>https://www.ptstudio7amsterdam.nl/equipment.html</loc>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://www.ptstudio7amsterdam.nl/elif-arzu-ogan.html</loc>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.ptstudio7amsterdam.nl/gokben-oztekin.html</loc>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.ptstudio7amsterdam.nl/goknur-dipli.html</loc>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.ptstudio7amsterdam.nl/lysette-portano.html</loc>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.ptstudio7amsterdam.nl/kristen-hollinsworth.html</loc>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.ptstudio7amsterdam.nl/#section-mindbody</loc>
         <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.ptstudio7amsterdam.nl/#section-three</loc>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.ptstudio7amsterdam.nl/#reviews</loc>
+        <priority>0.5</priority>
     </url>
     <url>
         <loc>https://www.ptstudio7amsterdam.nl/#workouts-section</loc>
-        <priority>0.6</priority>
+        <priority>0.5</priority>
     </url>
     <url>
-        <loc>https://www.ptstudio7amsterdam.nl/#rates-section</loc>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>https://www.ptstudio7amsterdam.nl/#section8</loc>
+        <loc>https://www.ptstudio7amsterdam.nl/#contact</loc>
         <priority>0.5</priority>
     </url>
 </urlset>
