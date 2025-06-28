@@ -75,10 +75,11 @@ body {
     display: none;
     background: none;
     border: none;
-    cursor: pointer;
-    padding: 8px;
-    margin-left: 8px;
+    cursor: pointer;        
     z-index: 102;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .navbar-toggle-icon {
@@ -113,9 +114,50 @@ body {
 
 @media (max-width: 800px) {
     .navbar-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         height: 56px;
+        position: relative;
+        width: 100%;
+        padding: 0 8px;
     }
-
+    .navbar-logo {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 105;
+    }
+    .navbar-booknow-mobile {
+        display: inline-block;
+        background: #ffd700;
+        color: #222 !important;
+        border-radius: 24px;
+        padding: 10px 20px;
+        text-align: center;
+        font-weight: 700;
+        font-size: 1.08rem;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+        position: absolute;
+        right: 56px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 104;
+        text-decoration: none;
+        margin: 0;
+    }
+    .navbar-toggle {
+        display: block !important;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        margin: 0;
+        background: none;
+        border: none;
+        z-index: 106;
+    }
     .navbar-links {
         position: fixed;
         top: 56px;
@@ -130,24 +172,22 @@ body {
         display: none;
         z-index: 101;
     }
-
     .navbar-links.open {
         display: flex;
     }
-
     .navbar-links li {
         width: 100%;
     }
-
     .navbar-links li a {
         display: block;
         width: 100%;
         padding: 16px 24px;
         border-bottom: 1px solid #222;
     }
-
-    .navbar-toggle {
-        display: block;
+}
+@media (min-width: 801px) {
+    .navbar-booknow-mobile {
+        display: none !important;
     }
 }
 
