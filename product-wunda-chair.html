@@ -149,9 +149,8 @@
         </div>
       </div>
     </section>
-  </main>
-  <div id="footer-include"></div>
-   <script src="./js/main.js"></script>
+  </main>  
+  <script src="./js/main.js"></script>
   <script src="./js/equipment.js"></script>
   <script>
     // Navbar fetch
@@ -160,13 +159,7 @@
       .then(data => {
         document.getElementById('navbar-container').innerHTML = data;
         if (typeof activateNavbarMenu === 'function') activateNavbarMenu();
-      });
-    // Footer fetch
-    fetch('footer.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('footer-include').innerHTML = data;
-      });
+      });    
 
     // Product gallery thumbnail click functionality
     document.addEventListener('DOMContentLoaded', function() {
@@ -191,14 +184,14 @@
       });
 
       // Product gallery thumbnail click
-      const mainImg = document.getElementById('mainProductImage');
+      const mainImg = document.querySelector('.main-image');
       const thumbs = document.querySelectorAll('.product-thumbnails .thumb');
       thumbs.forEach(thumb => {
         thumb.addEventListener('click', function() {
           thumbs.forEach(t => t.classList.remove('active'));
           this.classList.add('active');
-          if (mainImg && this.dataset.img) {
-            mainImg.src = this.dataset.img;
+          if (mainImg && (this.dataset.img || this.src)) {
+            mainImg.src = this.dataset.img || this.src;
             mainImg.alt = this.alt;
           }
         });
