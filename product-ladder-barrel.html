@@ -144,7 +144,7 @@
     </section>
   </main>
   <div id="footer-include"></div>
-   <script src="./js/main.js"></script>
+  <script src="./js/main.js"></script>
   <script src="./js/equipment.js"></script>
   <script>
     // Navbar fetch
@@ -184,14 +184,14 @@
       });
 
       // Product gallery thumbnail click
-      const mainImg = document.getElementById('mainProductImage');
+      const mainImg = document.querySelector('.main-image');
       const thumbs = document.querySelectorAll('.product-thumbnails .thumb');
       thumbs.forEach(thumb => {
         thumb.addEventListener('click', function() {
           thumbs.forEach(t => t.classList.remove('active'));
           this.classList.add('active');
-          if (mainImg && this.dataset.img) {
-            mainImg.src = this.dataset.img;
+          if (mainImg && (this.dataset.img || this.src)) {
+            mainImg.src = this.dataset.img || this.src;
             mainImg.alt = this.alt;
           }
         });
