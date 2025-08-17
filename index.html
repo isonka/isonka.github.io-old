@@ -183,7 +183,7 @@
     <div class="right">
         <h1>We welcome everyone in every age and fitness level</h1>
         <p>We would love to support you and motivate you to reach your goals and get a better healthiness</p>
-        <a href="#section-mindbody" class="btn">BOOK</a>
+  <a href="#" class="open-book-modal-btn btn">BOOK</a>
     </div>
     <div class="fixed-text">7</div>
 </section>
@@ -257,16 +257,6 @@
           </ul>
         </div>
       </a>      
-      <a href="kristen-hollinsworth.html" class="trainer-link">
-        <div class="trainer-card">
-          <img src="./assets/images/kristine.jpeg" alt="Kristen Hollinsworth">
-          <h3>Kristen Hollinsworth</h3>
-          <p>Smartbody Pilates Instructor</p>
-          <ul class="trainer-languages">
-            <li>English</li>        
-          </ul>
-        </div>
-      </a>
     </div>
   </div>
 </section>
@@ -404,15 +394,75 @@
     </section>    
     <footer>        
         <ul>            
-            <li><a href="#section-mindbody">Book</a></li>
+            <li><a href="#" id="open-book-modal-footer" class="open-book-modal-btn">Book</a></li>
+    <!-- Booking Modal -->
+    <div id="booking-modal" style="display:none; position:fixed; z-index:9999; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.55); align-items:center; justify-content:center;">
+      <div style="background:#fff; border-radius:18px; max-width:350px; width:90%; margin:auto; padding:36px 24px 28px 24px; box-shadow:0 8px 32px rgba(0,0,0,0.18); text-align:center; position:relative;">
+        <button id="close-booking-modal" style="position:absolute; top:12px; right:16px; background:none; border:none; font-size:1.7rem; color:#222; cursor:pointer;">&times;</button>
+        <h2 style="color:#222; margin-bottom:18px;">Book a Session</h2>
+        <p style="color:#444; margin-bottom:24px;">What would you like to book?</p>
+        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; gap: 16px; margin-top: 12px;">
+          <button id="book-group-btn" class="btn modal-book-btn">Group Classes</button>
+          <button id="book-private-btn" class="btn modal-book-btn">Private Classes</button>
+        </div>
+        <style>
+          .modal-book-btn {
+            background: #ffd700;
+            color: #222;
+            font-weight: 700;
+            min-width: 180px;
+            margin: 0 auto;
+            display: block;
+            text-align: center;
+          }
+          .modal-book-btn:last-child {
+            background: #222;
+            color: #ffd700;
+          }
+        </style>
+      </div>
+    </div>
             <li><a href="#section-three">About Us</a></li>
             <li><a href="#reviews">Reviews</a></li>
             <li><a href="#workouts-section">Workouts</a></li>
             <li><a href="pricing.html">Prices</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
-    </footer>    
-     <script>
+    </footer>
+    <script>
+    // Booking Modal Logic
+    function openBookingModal() {
+      document.getElementById('booking-modal').style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+    function closeBookingModal() {
+      document.getElementById('booking-modal').style.display = 'none';
+      document.body.style.overflow = '';
+    }
+    function bindBookingModalButtons() {
+      var btns = document.querySelectorAll('.open-book-modal-btn, .navbar-booknow-mobile');
+      btns.forEach(function(btn){
+        // Prevent duplicate listeners
+        btn.removeEventListener('click', handleBookClick);
+        btn.addEventListener('click', handleBookClick);
+      });
+    }
+    function handleBookClick(e) {
+      e.preventDefault();
+      openBookingModal();
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+      var modal = document.getElementById('booking-modal');
+      var closeBtn = document.getElementById('close-booking-modal');
+      var groupBtn = document.getElementById('book-group-btn');
+      var privateBtn = document.getElementById('book-private-btn');
+      bindBookingModalButtons();
+      if(closeBtn) closeBtn.addEventListener('click', function(e){ e.preventDefault(); closeBookingModal(); });
+      if(groupBtn) groupBtn.addEventListener('click', function(){ window.location.href = 'group-classes.html'; });
+      if(privateBtn) privateBtn.addEventListener('click', function(){ window.location.href = 'private-lessons.html'; });
+      window.addEventListener('keydown', function(e){ if(e.key==='Escape') closeBookingModal(); });
+      if(modal) modal.addEventListener('click', function(e){ if(e.target===modal) closeBookingModal(); });
+    });
       // Navbar JS: fetch sonrası menü fonksiyonunu tekrar uygula
   function activateNavbarMenu() {
     var toggle = document.querySelector('.navbar-toggle');
@@ -460,6 +510,7 @@
     .then(data => {
       document.getElementById('navbar-container').innerHTML = data;
       activateNavbarMenu(); // fetch sonrası fonksiyonu çağır
+      bindBookingModalButtons(); // re-bind modal triggers in navbar
     });
     </script>
 </body>
