@@ -52,6 +52,28 @@
         <p>Invest in your fitness journey with flexible options for every need</p>
     </section>
 
+<script>
+// Pricing tab switching logic
+document.addEventListener('DOMContentLoaded', function() {
+    var tabButtons = document.querySelectorAll('.pricing-tab');
+    var tabContents = document.querySelectorAll('.pricing-tab-content');
+    tabButtons.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var tab = btn.getAttribute('data-tab');
+            tabButtons.forEach(function(b) { b.classList.remove('active'); });
+            btn.classList.add('active');
+            tabContents.forEach(function(content) {
+                if (content.id === tab + '-classes' || content.id === tab + '-classes') {
+                    content.classList.add('active');
+                } else {
+                    content.classList.remove('active');
+                }
+            });
+        });
+    });
+});
+</script>
+
     <!-- New Step-Inspired Layout -->
     <div class="pricing-container">
         <!-- Special Offer -->
