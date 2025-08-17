@@ -134,5 +134,32 @@
       bindBookingModalButtons(); // re-bind modal triggers in navbar
     });
     </script>
+
+  <div id="booking-modal" style="display:none; position:fixed; z-index:9999; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.55); align-items:center; justify-content:center;">
+    <div style="background:#fff; border-radius:18px; max-width:350px; width:90%; margin:auto; padding:36px 24px 28px 24px; box-shadow:0 8px 32px rgba(0,0,0,0.18); text-align:center; position:relative;">
+      <button id="close-booking-modal" style="position:absolute; top:12px; right:16px; background:none; border:none; font-size:1.7rem; color:#222; cursor:pointer;">&times;</button>
+      <h2 class="modal-title" style="color:#222; margin-bottom:18px;">Book a Session</h2>
+      <p class="modal-subtitle" style="color:#444; margin-bottom:24px;">What would you like to book?</p>
+      <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; gap: 16px; margin-top: 12px;">
+        <button id="book-group-btn" class="btn modal-book-btn">Group Classes</button>
+        <button id="book-private-btn" class="btn modal-book-btn">Private Classes</button>
+      </div>
+      <style>
+        .modal-book-btn {
+          background: #ffd700;
+          color: #222;
+          font-weight: 700;
+          min-width: 180px;
+          margin: 0 auto;
+          display: block;
+          text-align: center;
+        }
+        .modal-book-btn:last-child {
+          background: #222;
+          color: #ffd700;
+        }
+      </style>
+    </div>
+  </div>
 </body>
 </html>
