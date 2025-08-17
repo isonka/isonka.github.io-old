@@ -45,19 +45,7 @@
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KB25PGXB"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    
-    <!-- Navigation Bar -->
-    <nav>
-        <ul>            
-            <li><a href="index.html#section-mindbody" aria-label="Book a session">Book</a></li>
-            <li><a href="index.html#section-three" aria-label="Learn about us">About Us</a></li>
-            <li><a href="index.html#reviews" aria-label="Read reviews">Reviews</a></li>
-            <li><a href="index.html#workouts-section" aria-label="Explore workouts">Workouts</a></li>
-            <li><a href="#" aria-label="View pricing">Prices</a></li>
-            <li><a href="index.html#contact" aria-label="Contact us">Contact</a></li>
-        </ul>
-    </nav>
-    
+     <div id="navbar-container"></div>        
     <!-- Hero Section -->
     <section class="pricing-hero">
         <h1>Training Packages & Pricing</h1>
@@ -445,43 +433,41 @@
         </ul>
     </footer>
 
-    <!-- JS for tab functionality and accordion -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Tab functionality
-            const tabs = document.querySelectorAll('.pricing-tab');
-            const tabContents = document.querySelectorAll('.pricing-tab-content');
-            
-            // Set default active tab (Group Classes)
-            document.getElementById('group-classes').classList.add('active');
-            
-            tabs.forEach(tab => {
-                tab.addEventListener('click', () => {
-                    // Remove active class from all tabs
-                    tabs.forEach(t => t.classList.remove('active'));
-                    tabContents.forEach(content => content.classList.remove('active'));
-                    
-                    // Add active class to clicked tab
-                    tab.classList.add('active');
-                    
-                    // Show corresponding content
-                    const tabId = tab.getAttribute('data-tab');
-                    document.getElementById(`${tabId}-classes`).classList.add('active');
-                });
-            });
-            
-            // Accordion functionality
-            const accordionHeaders = document.querySelectorAll('.accordion-header');
-            
-            accordionHeaders.forEach(header => {
-                header.addEventListener('click', () => {
-                    const accordionItem = header.parentElement;
-                    accordionItem.classList.toggle('active');
-                });
-            });
-        });
-    </script>
-    <script>
+    // Booking Modal Logic
+    function openBookingModal() {
+      document.getElementById('booking-modal').style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+    function closeBookingModal() {
+      document.getElementById('booking-modal').style.display = 'none';
+      document.body.style.overflow = '';
+    }
+    function bindBookingModalButtons() {
+      var btns = document.querySelectorAll('.open-book-modal-btn, .navbar-booknow-mobile');
+      btns.forEach(function(btn){
+        // Prevent duplicate listeners
+        btn.removeEventListener('click', handleBookClick);
+        btn.addEventListener('click', handleBookClick);
+      });
+    }
+    function handleBookClick(e) {
+      e.preventDefault();
+      openBookingModal();
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+      var modal = document.getElementById('booking-modal');
+      var closeBtn = document.getElementById('close-booking-modal');
+      var groupBtn = document.getElementById('book-group-btn');
+      var privateBtn = document.getElementById('book-private-btn');
+      bindBookingModalButtons();
+      if(closeBtn) closeBtn.addEventListener('click', function(e){ e.preventDefault(); closeBookingModal(); });
+      if(groupBtn) groupBtn.addEventListener('click', function(){ window.location.href = 'group-classes.html'; });
+      if(privateBtn) privateBtn.addEventListener('click', function(){ window.location.href = 'private-lessons.html'; });
+      window.addEventListener('keydown', function(e){ if(e.key==='Escape') closeBookingModal(); });
+      if(modal) modal.addEventListener('click', function(e){ if(e.target===modal) closeBookingModal(); });
+    });
+      // Navbar JS: fetch sonrası menü fonksiyonunu tekrar uygula
   function activateNavbarMenu() {
     var toggle = document.querySelector('.navbar-toggle');
     var links = document.querySelector('.navbar-links');
@@ -527,8 +513,9 @@
     .then(response => response.text())
     .then(data => {
       document.getElementById('navbar-container').innerHTML = data;
-      activateNavbarMenu();
+      activateNavbarMenu(); // fetch sonrası fonksiyonu çağır
+      bindBookingModalButtons(); // re-bind modal triggers in navbar
     });
-</script>
+    </script>
 </body>
 </html>
