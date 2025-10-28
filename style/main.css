@@ -192,6 +192,32 @@ body {
     .navbar-booknow-mobile {
         display: none !important;
     }
+    
+    .navbar-booknow-desktop {
+        background: #ffd700 !important;
+        color: #222 !important;
+        padding: 10px 24px !important;
+        border-radius: 25px !important;
+        font-weight: 700 !important;
+        font-size: 0.95rem !important;
+        transition: all 0.3s ease !important;
+    }
+    
+    .navbar-booknow-desktop:hover {
+        background: #e5c100 !important;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3);
+    }
+    
+    .navbar-booknow-desktop::after {
+        display: none !important;
+    }
+}
+
+@media (max-width: 800px) {
+    .navbar-booknow-desktop-wrapper {
+        display: none !important;
+    }
 }
 
 /* Modern Navigation Bar */
